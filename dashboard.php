@@ -20,6 +20,7 @@
             <th>Name</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Update</th>
         </thead>
         <tbody>
             <?php
@@ -30,17 +31,13 @@
                     <td><?=$user['name']?></td>
                     <td><?=$user['username']?></td>
                     <td><?=$user['email']?></td>
+                    <td><?= "<a href='delete.php?id=$user[id]'>Delete</a> | <a href='edit.php?id=$user[id]'>Update</a>"?></td>
                 </tr>
                 <?php
             }?>
             
         </tbody>
     </table>
-    <form action="add.php" method="POST">
-        <input type="text" name="name" placeholder="Name">
-        <input type="text" name="username" placeholder="Username">
-        <input type="email" name="email" placeholder="email">
-    </form>
     <a href="add.php">Add</a>
 </body>
 </html>
