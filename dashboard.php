@@ -14,6 +14,9 @@
     $users=$getUsers->fetchALL();
 
     ?>
+    <nav>
+        <a href="logout.php" class="nav-linl">Sign out</a>
+    </nav>
     <table>
         <thead>
             <th>ID</th>
